@@ -1,0 +1,15 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "sergey --watch",
+    "start": "sergey"
+  },
+  "author": "@felipetodev",
+  "license": "MIT",
+  "dependencies": {
+    "sergey": "0.0.13"
+  }
+}
