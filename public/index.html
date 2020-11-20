@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="assets/style.css" />
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://kit.fontawesome.com/4d04fcac38.js" crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7N71GLLH9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -82,7 +82,7 @@
                 </div>
                 <div class="project__info">
                     <h2 class="project__title">FAOU Consulting</h2>
-                    <p class="project__description">Sitio web inspirado en grupo de consultoría de RRHH, para el rendimiento laboral, salud mental laboral, entre otros. Implementando un stack de tecnología HTML, CSS y Javascript. (metodología JAMStack)</p>
+                    <p class="project__description">Sitio web inspirado en grupo de consultoría de RRHH, para el rendimiento laboral, salud mental laboral, entre otros. Implementando un stack de tecnología HTML, CSS y Javascript.</p>
                 </div>
             </div>
             <div class="projects__cover">
@@ -95,7 +95,7 @@
                 </div>
                 <div class="project__info">
                     <h2 class="project__title">Audiovisual</h2>
-                    <p class="project__description">Proyecto de página para agencia/productora audiovisual. Desarrollado con React, Styled Components y Framer Motion.</p>
+                    <p class="project__description">Proyecto de página inspirado en agencia/productora audiovisual. Desarrollado con React, Styled Components y Framer Motion.</p>
                 </div>
             </div>
             <div class="projects__cover">
@@ -108,7 +108,7 @@
                 </div>
                 <div class="project__info">
                     <h2 class="project__title">Copyrightify</h2>
-                    <p class="project__description">Reproductor de música de escritorio desarrollado en React, con una librería sin copyright. Pensado para creadores de contenidos online. Youtube, Facebook, Twitch, etc.</p>
+                    <p class="project__description">Reproductor de música de escritorio desarrollado en React, con una playlist sin copyright. Pensado para creadores de contenidos online. Youtube, Facebook, Twitch, etc.</p>
                 </div>
             </div>
         </div>
@@ -165,6 +165,29 @@
         </div>
     </div>
 </section>
+    <section id="form-container" class="icon fa fa-envelope">
+    <span id="form-close" class="icon fa fa-close"></span>
+    <div id="form-content">
+        <div id="form-head">
+            <h1 class="pre">Contacto</h1>
+            <p class="pre">Me encanta poder ayudarte...</p>
+            <h1 class="post">Gracias!</h1>
+            <p class="post">Contestare a la brevedad 🤓</p>
+        </div>
+        <form action="https://formsubmit.co/fe.ossandon.u@gmail.com" method="POST" target="_blank" rel="noopener">
+            <input class="input name" name="user_name" title="Nombre solo acepta letras y espacios en blanco" type="text" placeholder="Nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required/>
+            <input class="input email" name="user_email" type="email" placeholder="Correo" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required/>
+            <select class="input select" name="asunto">
+                <option disabled="">¿De que deberiamos hablar?</option>
+                <option>Oportunidad de trabajo</option>
+                <option>Proyecto Freelance</option>
+                <option>Otro</option>
+            </select>
+            <textarea name="comments" class="input message" placeholder="Escribe tu mensaje..." required></textarea>
+            <input class="input submit" type="submit" value="Enviar"/>
+        </form>
+    </div>
+</section>
     <footer>
     <nav class="nav__list">
         <a href="/" class="nav__link">Felipe<span>Ossandón</span></a>
@@ -173,5 +196,6 @@
         <a href="https://github.com/felipetodev" rel="GitHub" class="nav__link" target="_blank" rel="noopener">GitHub</a>
     </nav>
 </footer>
+    <script src="src/index.js"></script>
 </body>
 </html>

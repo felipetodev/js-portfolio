@@ -1,0 +1,23 @@
+<section id="form-container" class="icon fa fa-envelope">
+    <span id="form-close" class="icon fa fa-close"></span>
+    <div id="form-content">
+        <div id="form-head">
+            <h1 class="pre">Contacto</h1>
+            <p class="pre">Me encanta poder ayudarte...</p>
+            <h1 class="post">Gracias!</h1>
+            <p class="post">Contestare a la brevedad 🤓</p>
+        </div>
+        <form action="https://formsubmit.co/fe.ossandon.u@gmail.com" method="POST" target="_blank" rel="noopener">
+            <input class="input name" name="user_name" title="Nombre solo acepta letras y espacios en blanco" type="text" placeholder="Nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required/>
+            <input class="input email" name="user_email" type="email" placeholder="Correo" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required/>
+            <select class="input select" name="asunto">
+                <option disabled="">¿De que deberiamos hablar?</option>
+                <option>Oportunidad de trabajo</option>
+                <option>Proyecto Freelance</option>
+                <option>Otro</option>
+            </select>
+            <textarea name="comments" class="input message" placeholder="Escribe tu mensaje..." required></textarea>
+            <input class="input submit" type="submit" value="Enviar"/>
+        </form>
+    </div>
+</section>
