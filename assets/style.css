@@ -495,7 +495,7 @@ footer {
     margin: 0 auto;
     right: 1.1vw;
     bottom: 2vh;
-    background-color: #1ec9bc;
+    background-image: linear-gradient(to right top, #24f499, #00e5be, #00d2d6, #00bede, #1ca8d5);
     overflow: hidden;
     border-radius: 50%;
     width: 60px;
