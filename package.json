@@ -1,15 +1,13 @@
 {
-  "name": "portafolio",
-  "version": "1.0.0",
-  "description": "Portafolio",
-  "main": "index.html",
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "sergey --watch",
-    "start": "sergey"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "author": "@felipetodev",
-  "license": "MIT",
-  "dependencies": {
-    "sergey": "0.0.13"
+  "devDependencies": {
+    "astro": "^0.22.20"
   }
 }

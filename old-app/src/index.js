@@ -1,11 +1,49 @@
 const d = document;
+
+function ga() {
+    window.dataLayer = window.dataLayer || [];
+    
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    
+    gtag("js", new Date());
+    gtag("config", "G-F7N71GLLH9", {
+        page_path: window.location.pathname,
+    });
+}
+ga();
+
+
+function gaEvent(event, category) {
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    return gtag("event", event, category)
+}
+
+const $navLink = d.querySelectorAll('.nav__link');
+
+function navAnalytics() {
+    $navLink.forEach(link => {
+        link.addEventListener('click', e => {
+            console.log('dispatched') // <----------------------
+            gaEvent(`click_en_${e.target.innerText}`, { 
+                Categoria: 'Links de redes sociales', 
+                Tag: 'Redes sociales'
+            });
+        });
+    })
+}
+
+navAnalytics()
+
 const $formContainer = d.getElementById("form-container");
 const $formClose = d.getElementById("form-close");
 
 function openForm() {
     $formContainer.addEventListener("click", e => {
-        // console.log(e.target.value);
-
         if(e.target === $formContainer || e.target === $formClose) {
             $formContainer.classList.toggle("expand");
             $formContainer.childNodes[1].classList.toggle("expand");
