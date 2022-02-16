@@ -1,0 +1,90 @@
+---
+
+---
+<style lang='scss'>
+  section {
+    background: #21ddae60;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      width: 80%;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      height: 50vh;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        img {
+          width: 100%;
+          display: block;
+          height: auto;
+          background: #66c0e1b4;
+          border-radius: 9999px;
+        }
+        h3 {
+          transition: all 300ms ease;
+          font-weight: 500;
+          opacity: 0;
+          font-size: 0%;
+          margin: 0;
+        }
+      }
+    } 
+  }
+
+  @media(min-width: 960px) {
+    section {
+      ul {
+        li {
+          width: 5rem;
+          &:hover h3 {
+            opacity: 1;
+            margin: 1rem;
+            font-size: 85%;
+          }
+        }
+      }
+    }
+  }
+</style>
+<section>
+  <ul>
+    <li>
+      <img src={Astro.resolve('/public/assets/html5.svg')} alt="html" />
+      <h3>HTML</h3>
+    </li>
+    <li>
+      <img src={Astro.resolve('/public/assets/css.svg')} alt="css" />
+      <h3>CSS</h3>
+     </li>
+     <li>
+      <img src={Astro.resolve('/public/assets/sass.svg')} alt="sass" />
+      <h3>SASS</h3>
+    </li>
+    <li>
+      <img src={Astro.resolve('/public/assets/javascript.svg')} alt="javascript" />
+      <h3>Javascript</h3>
+    </li>
+    <li>
+      <img src={Astro.resolve('/public/assets/react.svg')} alt="react" />
+      <h3>ReactJS</h3>
+    </li>
+    <li>
+      <img src={Astro.resolve('/public/assets/git.svg')} alt="git" />
+      <h3>Git</h3>
+    </li>
+    <li>
+      <img src={Astro.resolve('/public/assets/github.svg')} alt="github" />
+      <h3>GitHub</h3>
+    </li>
+  </ul>
+</section>
