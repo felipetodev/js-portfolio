@@ -1,0 +1,193 @@
+---
+const projects = {
+  Granola: {
+    name: 'Audiovisual',
+    img: '/public/assets/studio.jpg',
+    description: 'Proyecto de página inspirado en agencia/productora audiovisual. Desarrollado con React, Styled Components y Framer Motion.',
+    website: 'https://awesome-allen-d82773.netlify.app/',
+    github: 'https://github.com/felipetodev/react-portfolio'
+  },
+  Copyrightify: {
+    name: 'Copyrightify',
+    img: '/public/assets/copyrightify.jpg',
+    description: 'Reproductor de música de escritorio desarrollado en React, con una playlist sin copyright. Pensado para creadores de contenidos online. Youtube, Facebook, Twitch, etc.',
+    website: 'https://zealous-hugle-036f1a.netlify.app/',
+    github: 'https://github.com/felipetodev/no-copyrightfy'
+  },
+  Otro: {
+    name: 'Audiovisual',
+    img: '/public/assets/studio.jpg',
+    description: 'Proyecto de página inspirado en agencia/productora audiovisual. Desarrollado con React, Styled Components y Framer Motion.',
+    website: 'https://awesome-allen-d82773.netlify.app/',
+    github: 'https://github.com/felipetodev/react-portfolio'
+  },
+  Otro2: {
+    name: 'Copyrightify',
+    img: '/public/assets/copyrightify.jpg',
+    description: 'Reproductor de música de escritorio desarrollado en React, con una playlist sin copyright. Pensado para creadores de contenidos online. Youtube, Facebook, Twitch, etc.',
+    website: 'https://zealous-hugle-036f1a.netlify.app/',
+    github: 'https://github.com/felipetodev/no-copyrightfy'
+  },
+}
+---
+<style lang='scss'>
+  section {
+    position: relative;
+    text-align: center;
+    padding-bottom: 2rem;
+    box-shadow: 2px 4px rgba(0, 0, 0, .03);
+
+    .container {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1180px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      background: var(--light);
+  
+      h1 {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1.65em 0;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5rem;
+        padding-bottom: 1.65em;
+        pointer-events: none;
+
+        .card {
+          display: block;
+          background: #eaeef2;
+          transition: all 300ms ease;
+          box-shadow: 0 0 30px rgba(255, 44, 220, 0.1);
+          pointer-events: auto;
+
+          .img-container {
+            position: relative;
+            img {
+              object-fit: cover;
+              width: 100%;
+              display: block;
+              height: auto;
+              border: none;
+            }
+          
+            .stack-info {
+              a {
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: all 200ms ease-in;
+
+                &:hover {
+                  box-shadow: inset 0 3px 0 rgb(10, 109, 109);
+                }
+              }
+              .is-mobile {
+                display: none;
+              }
+            }
+          }
+          .stack-description {
+            text-align: start;
+            padding: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width: 960px) {
+    section .container {
+      .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        &:hover>:not(:hover) {
+          opacity: 0.3;
+        }
+  
+        .card {
+          &:hover {
+            transform: scale(1.05);
+          }
+          .img-container {
+            .stack-info {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              width: 100%;
+              height: auto;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              opacity: 0;
+              transition: all 150ms ease-in;
+  
+              &:hover {
+                opacity: 1;
+              }
+    
+              a {
+                position: relative;
+                opacity: 1;
+                font-weight: bold;
+                color: rgb(10, 109, 109);
+                font-size: 1rem;
+                background: rgba(255, 255, 255, 0.836);
+                text-decoration: none;
+                padding: 1rem;
+              }
+              
+              .is-mobile {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>Proyectos Recientes</h2>
+    </div>
+    <div class="card-container">
+      {Object.values(projects).map(el => (
+        <div class="card">
+          <div class="img-container">
+            <img src={Astro.resolve(el.img)} alt={el.name}>
+            <div class="stack-info">
+              <a href={el.website} target="_blank" rel="noopener">
+                Website
+              </a>
+              <a class="is-mobile" href={el.github} target="_blank" rel="noopener">
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="stack-description">
+            <h2>
+              {el.name}
+            </h2>
+            <p>
+              {el.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
