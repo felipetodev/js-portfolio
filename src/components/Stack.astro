@@ -22,12 +22,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         width: 3rem;
         img {
           width: 100%;
           display: block;
           height: auto;
-          background: #66c0e1b4;
+          background: var(--light-blue);
           border-radius: 9999px;
         }
         h3 {
@@ -59,7 +60,7 @@
 <section>
   <ul>
     <li>
-      <img src={Astro.resolve('/public/assets/html5.svg')} alt="html" />
+      <img class="gradient" src={Astro.resolve('/public/assets/html5.svg')} alt="html" />
       <h3>HTML</h3>
     </li>
     <li>
@@ -72,7 +73,7 @@
     </li>
     <li>
       <img src={Astro.resolve('/public/assets/javascript.svg')} alt="javascript" />
-      <h3>Javascript</h3>
+      <h3>JavaScript</h3>
     </li>
     <li>
       <img src={Astro.resolve('/public/assets/react.svg')} alt="react" />
@@ -88,3 +89,17 @@
     </li>
   </ul>
 </section>
+<script>
+  const $$ = selector => document.querySelectorAll(selector)
+
+  const canvasConfetti = async () => {
+    const module = await import('https://cdn.skypack.dev/canvas-confetti')
+    return module.default()
+  }
+
+  $$('li').forEach(el => {
+    el.addEventListener('click', () => {
+      canvasConfetti()
+    })
+  })
+</script>
