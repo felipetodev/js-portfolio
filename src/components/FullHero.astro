@@ -6,7 +6,7 @@
     margin-bottom: 1rem;
     position: relative;
     text-align: center;
-    box-shadow: 2px 4px rgba(0, 0, 0, .03);
+    box-shadow: 2px 0 6px 2px rgba(0, 0, 0, .03);
 
     .container {
       display: flex;
@@ -24,19 +24,16 @@
         max-width: 800px;
         margin: 0 auto;
         padding: 1.65em 0;
-
         p {
           margin: 0 0 1.2em;
           font-size: 1.25rem;
-          letter-spacing: 1.5px;
+          letter-spacing: 1px;
           line-height: 2.5rem;
         }
-
         h2 {
           text-align: center;
           font-size: 2.2rem;
           letter-spacing: 2px;
-          color: #66c1e1;
         }
       }
 
@@ -97,12 +94,13 @@
         overflow: hidden;
 
         .hero-description {
-          text-align: left;
-          padding: 3.5em 0 3.5em 20px;
-          max-width: 700px;
+          position: relative;
           width: 55%;
           margin: 0 auto 0 8rem;
-          position: relative;
+          padding: 3.5em 0 3.5em 20px;
+          max-width: 700px;
+          font-weight: 500;
+          text-align: left;
           z-index: 1;
 
           h2 {
@@ -137,7 +135,9 @@
 <section>
   <div class="container">
     <div class="hero-description">
-      <h2>Front-End Developer&<br>Web Designer.</h2>
+      <h2 class="gradient">Front-End Developer &
+        <br>Web Designer.
+      </h2>
       <p>Autodidacta, minimalista, innovador.</p>
       <p>
         Mis principales skills se concentran en HTML, CSS, VanillaJS & ReactJS. 

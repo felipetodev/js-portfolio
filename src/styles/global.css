@@ -6,7 +6,7 @@
   --dark: #2f2831;
   --dark-hover: #1f1821;
   --mid: #eaeef2;
-  --mid-blue: #607288;
+  --light-blue: #00B3CC;
   --gradient-blue: hsla(151.9, 100%, 49.4%, 0.85);
   --gradient-green: hsl(196.8, 77.8%, 47.6%);
   --gradient-overlay-blue: hsl(166, 68.8%, 42.7%);
@@ -31,11 +31,15 @@ header, footer {
   display: block;
   letter-spacing: 2px;
   font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0,0,0,.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
   font-size: 1.1rem;
   padding: 1.75em 0;
   position: relative;
   z-index: 10;
+}
+
+footer {
+  box-shadow: 2px 0 4px 1px rgba(0,0,0,.06);
 }
 
 nav {
@@ -73,8 +77,10 @@ nav a:first-child {
   max-width: 800px;
   margin: 0 auto;
   padding: 1.65em 0;
+}
 
-  background: linear-gradient(135deg, #D6FF7F 0%, #00B3CC 100%);
+.gradient {
+  background: linear-gradient(350deg, #D6FF7F 0%, #00B3CC 100%);
   color: #5CD4AC;
   background-clip: text;
   -webkit-background-clip: text;

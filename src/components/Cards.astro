@@ -35,7 +35,6 @@ const projects = {
     position: relative;
     text-align: center;
     padding-bottom: 2rem;
-    box-shadow: 2px 4px rgba(0, 0, 0, .03);
 
     .container {
       display: flex;
@@ -88,10 +87,6 @@ const projects = {
                 left: 0;
                 right: 0;
                 transition: all 200ms ease-in;
-
-                &:hover {
-                  box-shadow: inset 0 3px 0 rgb(10, 109, 109);
-                }
               }
               .is-mobile {
                 display: none;
@@ -142,11 +137,14 @@ const projects = {
                 position: relative;
                 opacity: 1;
                 font-weight: bold;
-                color: rgb(10, 109, 109);
+                color: var(--light-blue);
                 font-size: 1rem;
                 background: rgba(255, 255, 255, 0.836);
                 text-decoration: none;
                 padding: 1rem;
+                &:hover {
+                  box-shadow: inset 0 3px 0 var(--light-blue);
+                }
               }
               
               .is-mobile {
@@ -161,7 +159,7 @@ const projects = {
 </style>
 <section>
   <div class="container">
-    <div class="title">
+    <div class="title gradient">
       <h2>Proyectos Recientes</h2>
     </div>
     <div class="card-container">
