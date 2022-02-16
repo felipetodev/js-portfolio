@@ -1,0 +1,156 @@
+---
+
+---
+<style lang='scss'>
+  section {
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: center;
+    box-shadow: 2px 4px rgba(0, 0, 0, .03);
+
+    .container {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1180px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      background: var(--light);
+
+      .hero-description {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1.65em 0;
+
+        p {
+          margin: 0 0 1.2em;
+          font-size: 1.25rem;
+          letter-spacing: 1.5px;
+          line-height: 2.5rem;
+        }
+
+        h2 {
+          text-align: center;
+          font-size: 2.2rem;
+          letter-spacing: 2px;
+          color: #66c1e1;
+        }
+      }
+
+      figure {
+        display: block;
+        background: var(--gradient);
+        margin: 0 auto 20px;
+        max-width: 461px;
+        padding: 18px;
+
+        div {
+          position: relative;
+          box-shadow: 0 0 30px rgba(0,0,0,.15);
+
+          &::after {
+            position: absolute;
+            content: '';
+            opacity: 0.4;
+            background-image: linear-gradient(90deg,var(--gradient-overlay-blue),var(--gradient-overlay-green));
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            mix-blend-mode:screen;
+            opacity:1;
+          }
+
+          & img {
+            filter: saturate(0);
+            width: 100%;
+            display: block;
+            height: auto;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width: 960px) {
+    section {
+      &::after {
+        background: var(--gradient);
+        position: absolute;
+        content: '';
+        height: 100%;
+        z-index: -1;
+        width: 50%;
+        left: 0;
+        top: 0;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+        align-items: stretch;
+        overflow: hidden;
+
+        .hero-description {
+          text-align: left;
+          padding: 3.5em 0 3.5em 20px;
+          max-width: 700px;
+          width: 55%;
+          margin: 0 auto 0 8rem;
+          position: relative;
+          z-index: 1;
+
+          h2 {
+            text-align: inherit;
+          }
+        }
+
+        figure {
+          background-image: linear-gradient(to left,#f9fafb,rgba(249,250,251,0)),var(--gradient);
+          background-size: 200px 100%,auto;
+          background-repeat: no-repeat, repeat-x;
+          background-position: 100% 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          order: -1;
+          width: 340px;
+          max-width: none;
+          margin: 0;
+          z-index:2;
+
+          div {
+            transform: translateX(-25px) scale(0.875);
+            width: 460px;
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+</style>
+<section>
+  <div class="container">
+    <div class="hero-description">
+      <h2>Front-End Developer&<br>Web Designer.</h2>
+      <p>Autodidacta, minimalista, innovador.</p>
+      <p>
+        Mis principales skills se concentran en HTML, CSS, VanillaJS & ReactJS. 
+        realizando Static Site Generation, Progressive Web App's, Single Page Application y en 
+        general pensando en la experiencia de usuario primero.
+      </p>
+    </div>
+    <figure>
+      <div>
+        <picture>
+          <img src={Astro.resolve('/public/assets/profile.jpg')} alt="Felipe Ossandon" />
+        </picture>
+      </div>
+    </figure>
+  </div>
+</section>
