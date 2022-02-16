@@ -1,0 +1,81 @@
+---
+
+---
+<style lang='scss'>
+  section {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--light);
+    .container {
+      padding-bottom: 4rem;
+      h3 {
+        text-align: center;
+      }
+      a {
+        display: inline-block;
+        font-size: .95rem;
+        text-decoration: none;
+        color: #105f7c;
+        &:hover {
+          color: #66c1e1;
+        }
+      }
+      .stack {
+        display: flex;
+        justify-content: center;
+        p {
+          border: 2px solid;
+          padding: 0.5rem 0.8rem;
+          color: #105f7c;
+          font-size: 80%;
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width: 960px) {
+    section {
+      .title h2 {
+        text-align: inherit;
+      }
+      .container {
+        h3 {
+          text-align: start;
+        }
+        .stack {
+          justify-content: start;
+        }
+      }
+    }
+  }
+</style>
+<section>
+  <div class="title">
+    <h2>Otros Proyectos</h2>
+  </div>
+  <div class="container">
+    <h3>Amazon Clone</h3>
+    <p>
+      Proyecto que hice por diversión y para seguir desarrollando mis habilidades en esta librería, 
+      lo cual me ayudo a comprender como se trabaja en aplicaciones a mayor escala.
+      <a href="https://clone-ddcc8.web.app/" target="_blank" rel="noopener">
+        Ver más...
+      </a>
+    </p>
+    <div class="stack">
+      <p>React</p>
+      <p>Firebase</p>
+      <p>Stripe</p>
+    </div>
+  </div>
+</section>
