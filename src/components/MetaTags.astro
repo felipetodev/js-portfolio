@@ -1,0 +1,26 @@
+---
+const { title, description } = Astro.props
+---
+<meta charset='utf8' />
+<meta name='viewport' content='width=device-width' />
+<meta name='author' content='Felipe Ossandon'>
+<meta name='geo.placename' content='Santiago'>
+<meta name='geo.region' content='CL'>
+<meta property='og:type' content='website'>
+<meta property='og:site_name' content='Felipe Ossandon'>
+<meta property='og:title' content={description}>
+<meta property='og:description' content='Felipe Ossandon Portfolio - Frontend Developer'>
+<meta property='og:url' content='https://github.com/felipetodev/js-portfolio/'>
+<link rel='canonical' href='https://github.com/felipetodev/js-portfolio/'>
+<meta property='twitter:card' content='summary_large_image'>
+<meta property='twitter:site' content='@fe_ossandon'>
+<meta property='twitter:title' content={description}>
+<meta property='twitter:description' content='Felipe Ossandon Portfolio - Frontend Developer'>
+<meta property='twitter:url' content='https://github.com/felipetodev/js-portfolio/'>
+<meta name="msapplication-TileColor" content="#1f1f1f" />
+<meta name="theme-color" content="#1f1f1f" />
+<link rel='stylesheet' type='text/css' href={Astro.resolve('../styles/global.css')} />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap' rel='stylesheet'>
+<meta name='description' content={description}>
+<title>{title}</title>

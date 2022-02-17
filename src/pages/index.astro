@@ -1,4 +1,5 @@
 ---
+import MetaTags from 'src/components/MetaTags.astro'
 import Nav from 'src/components/Nav.astro'
 import FullHero from 'src/components/FullHero.astro'
 import Cards from 'src/components/Cards.astro'
@@ -8,10 +9,7 @@ import Footer from 'src/components/Footer.astro'
 ---
 <html lang='es'>
   <head>
-    <meta charset='utf8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' type='text/css' href={Astro.resolve('../styles/global.css')} />
-    <title>Cambiar</title>
+    <MetaTags title='Felipe to Dev' description='Felipe Ossandon - Frontend Developer' />
   </head>
   <body>
     <Nav />
