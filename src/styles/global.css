@@ -74,9 +74,14 @@ nav a:first-child {
 }
 
 .title {
-  max-width: 800px;
   margin: 0 auto;
   padding: 1.65em 0;
+}
+
+.title h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
 }
 
 .gradient {
@@ -86,12 +91,6 @@ nav a:first-child {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
-}
-
-.title h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  letter-spacing: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
