@@ -1,6 +1,6 @@
 {
-  "name": "@example/starter",
-  "version": "0.0.1",
+  "name": "@felipeto/portfolio",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -8,6 +8,6 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.22.20"
+    "astro": "0.22.20"
   }
 }
