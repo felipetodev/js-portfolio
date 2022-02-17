@@ -158,25 +158,25 @@ const projects = {
   }
 </style>
 <section>
-  <div class="container">
-    <div class="title gradient">
+  <div class='container'>
+    <div class='title gradient'>
       <h2>Proyectos Recientes</h2>
     </div>
-    <div class="card-container">
+    <div class='card-container'>
       {Object.values(projects).map(el => (
-        <div class="card">
-          <div class="img-container">
+        <div class='card'>
+          <div class='img-container'>
             <img src={Astro.resolve(el.img)} alt={el.name}>
-            <div class="stack-info">
-              <a href={el.website} target="_blank" rel="noopener">
+            <div class='stack-info'>
+              <a href={el.website} target='_blank' rel='noopener'>
                 Website
               </a>
-              <a class="is-mobile" href={el.github} target="_blank" rel="noopener">
+              <a class='is-mobile' href={el.github} target='_blank' rel='noopener'>
                 GitHub
               </a>
             </div>
           </div>
-          <div class="stack-description">
+          <div class='stack-description'>
             <h2>
               {el.name}
             </h2>
