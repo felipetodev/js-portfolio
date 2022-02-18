@@ -14,13 +14,12 @@ import Footer from 'src/components/Footer.astro'
   <body>
     <Nav />
     <FullHero />
-    <Cards />
-    <Stack />
-    <More />
-    <Footer />
+    <Cards client:visible />
+    <Stack client:visible />
+    <More client:visible />
+    <Footer client:visible />
   </body>
 </html>
 <script>
- // JS Code entered here is ran entirely on the Browser
- console.log('See me in the devTools')
+  console.log('https://github.com/felipetodev 🚀')
 </script>
