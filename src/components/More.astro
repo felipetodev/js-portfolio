@@ -4,6 +4,7 @@
 <style lang='scss'>
   section {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     flex-wrap: wrap;
     width: 90%;
@@ -12,9 +13,9 @@
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 4rem;
     // background: var(--light);
     .container {
-      padding-bottom: 4rem;
       h3 {
         text-align: center;
       }
@@ -64,18 +65,20 @@
     <h2 class='gradient'>Otros Proyectos</h2>
   </div>
   <div class='container'>
-    <h3>Amazon Clone</h3>
+    <h3>Blur image loader</h3>
     <p>
-      Proyecto que hice por diversión y para seguir desarrollando mis habilidades en esta librería, 
-      lo cual me ayudo a comprender como se trabaja en aplicaciones a mayor escala.
-      <a href='https://clone-ddcc8.web.app/' target='_blank' rel='noopener'>
+      Intento de replicar feature de Next.js
+      <a href='https://image-component.nextjs.gallery' target='_blank' rel='noopener'>
+        blur-up placeholder
+      </a>
+      mientras carga la resolución de imagen
+      <a href='https://sexy-image-blur-loader.netlify.app/' target='_blank' rel='noopener'>
         Ver más...
       </a>
     </p>
     <div class='stack'>
       <p class='gradient'>React</p>
-      <p class='gradient'>Firebase</p>
-      <p class='gradient'>Stripe</p>
+      <p class='gradient'>Vite</p>
     </div>
   </div>
 </section>

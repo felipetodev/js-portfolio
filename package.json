@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy:dev": "astro build && npx vercel",
+    "deploy:prod": "astro build && npx vercel --prod"
   },
   "devDependencies": {
     "astro": "0.22.20"
