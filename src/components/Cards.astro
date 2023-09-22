@@ -7,13 +7,27 @@ const projects = {
     website: 'https://zealous-hugle-036f1a.netlify.app/',
     github: 'https://github.com/felipetodev/no-copyrightfy'
   },
-  Soon: {
-    name: 'Under construction',
-    img: '/assets/copyrightify.jpg',
-    description: 'Soon more projects... go to github in the meantime ✌️',
-    website: 'https://github.com/felipetodev',
-    github: 'https://github.com/felipetodev'
+  Forever: {
+    name: 'Forever-Chile',
+    img: '/assets/forever.jpg',
+    description: 'Trabajo para agencia Chilena de dirección de arte, films, y otros... manejo de contenido a través de Contentful, revalidación de contenido on demand con Next.js',
+    website: 'https://www.forever-chile.com/',
+    github: 'https://github.com/felipetodev/forever-chile'
   },
+  Bloom: {
+    name: 'Bloom Bar',
+    img: '/assets/bloom.png',
+    description: 'Trabajo para primer bar nikkei de Chile, carta responsive, manejo de contenido a través de Contentful, revalidación de contenido on demand con Next.js, tailwindcss',
+    website: 'https://www.bloombar.cl',
+    github: 'https://github.com/felipetodev/bloom-bar'
+  },
+  Colabot: {
+    name: 'ColaBOT AI 🤖',
+    img: '/assets/colabot.gif',
+    description: 'ColaBOT es un asistente de IA para Visual Studio Code que te ayuda a acelerar tu productividad a la hora de desarrollar. Te permite hacer preguntas sobre tu codigo, generar code snippets, test, y mucho más. ColaBOT cuenta con +1.200 descargas (⭐)',
+    website: 'https://marketplace.visualstudio.com/items?itemName=ColaBOT.colabot-vscode',
+    github: 'https://github.com/felipetodev/colabot'
+  }
 }
 ---
 <style lang='scss'>
@@ -62,6 +76,7 @@ const projects = {
               display: block;
               height: auto;
               border: none;
+              height: 300px;
             }
           
             .stack-info {
@@ -152,7 +167,7 @@ const projects = {
       {Object.values(projects).map(el => (
         <div class='card'>
           <div class='img-container'>
-            <img src={Astro.resolve(el.img)} alt={el.name}>
+            <img src={el.img} alt={el.name}>
             <div class='stack-info'>
               <a href={el.website} target='_blank' rel='noopener'>
                 Website

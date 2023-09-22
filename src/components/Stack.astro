@@ -66,31 +66,31 @@
 <section>
   <ul>
     <li>
-      <img class='gradient' src={Astro.resolve('/assets/html5.svg')} alt='html' />
+      <img class='gradient' src='/assets/html5.svg' alt='html' />
       <h3>HTML</h3>
     </li>
     <li>
-      <img src={Astro.resolve('/assets/css.svg')} alt='css' />
+      <img src='/assets/css.svg' alt='css' />
       <h3>CSS</h3>
      </li>
      <li>
-      <img src={Astro.resolve('/assets/sass.svg')} alt='sass' />
+      <img src='/assets/sass.svg' alt='sass' />
       <h3>SASS</h3>
     </li>
     <li>
-      <img src={Astro.resolve('/assets/javascript.svg')} alt='javascript' />
+      <img src='/assets/javascript.svg' alt='javascript' />
       <h3>JavaScript</h3>
     </li>
     <li>
-      <img src={Astro.resolve('/assets/react.svg')} alt='react' />
+      <img src='/assets/react.svg' alt='react' />
       <h3>ReactJS</h3>
     </li>
     <li>
-      <img src={Astro.resolve('/assets/git.svg')} alt='git' />
+      <img src='/assets/git.svg' alt='git' />
       <h3>Git</h3>
     </li>
     <li>
-      <img src={Astro.resolve('/assets/github.svg')} alt='github' />
+      <img src='/assets/github.svg' alt='github' />
       <h3>GitHub</h3>
     </li>
   </ul>
@@ -99,6 +99,7 @@
   const $$ = selector => document.querySelectorAll(selector)
 
   const canvasConfetti = async () => {
+    //@ts-ignore
     const module = await import('https://cdn.skypack.dev/canvas-confetti')
     return module.default()
   }

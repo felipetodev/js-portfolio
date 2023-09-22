@@ -6,6 +6,7 @@ import Cards from 'src/components/Cards.astro'
 import Stack from 'src/components/Stack.astro'
 import More from 'src/components/More.astro'
 import Footer from 'src/components/Footer.astro'
+import '../styles/global.css';
 ---
 <html lang='es'>
   <head>
@@ -14,10 +15,10 @@ import Footer from 'src/components/Footer.astro'
   <body>
     <Nav />
     <FullHero />
-    <Cards client:visible />
-    <Stack client:visible />
-    <More client:visible />
-    <Footer client:visible />
+    <Cards />
+    <Stack />
+    <More />
+    <Footer />
   </body>
 </html>
 <script>
